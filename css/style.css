@@ -34,7 +34,7 @@ body {
 
 .header h1 {
   font-size: 50px;
-  padding: 0px;
+  padding: 5px;
   padding-left: 70px;
   padding-right: 10px;
   background-color: #92cccd;
@@ -114,6 +114,9 @@ p {
 
 .hero-banner {
   background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 /* FLEX */ /* ----------------------------------- */
 .flexcontainer {
@@ -150,7 +153,43 @@ p {
   font-size: 30px;
 }
 /* <!-- ------------------ --> */
+/* aside */
 
+.page-section {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  margin: 50px 0px;
+}
+.page-section article, 
+.page-section .flexcontainer,
+.page-section .contact {
+  padding: 0px 70px;
+  border-left: 3px solid #31343d;
+}
+.page-section .flexcontainer {
+  padding: 0px 60px;
+}
+
+#about h2, #work h2, #contact h2 {
+  padding-right: 0.5em;
+  text-align: right;
+  font-size: 42px;
+  color: #31343d; 
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-left: 3px solid #31343d;
+}
+
+/* #aboutdescription {
+  border-left: 3px solid #31343d;
+  padding-left: 2em;
+  margin-right: 5em;
+} */
 /* media query */
 @media screen and (max-width: 768px) {
   .flex-item {
