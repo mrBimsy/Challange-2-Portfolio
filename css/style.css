@@ -11,8 +11,6 @@ body {
 }
 /* Header + nav bar */
 .header {
-  /* display: flex;
-  flex-direction: row; */
   height: 80px;
   width: 100%;
   display: inline-flex;
@@ -22,7 +20,6 @@ body {
 }
 
 .nav {
-  /* display: inline-flex; */
   margin-right: 5em;
   font-size: 26px;
 }
@@ -40,31 +37,23 @@ body {
   background-color: #92cccd;
   color: #31343d;
 }
-
+/* ----------------------------------- */
 /* Hero banner */
 .hero-banner {
   background-image: url("../images/02-hero-bg.jpg");
+  background-position: center;
   height: 200px;
 }
 .hero-banner div h2 {
   display: flex;
   justify-content: right;
   position: absolute;
-  top:180px;
+  top: 180px;
   right: 5em;
   padding: 5px;
   font-size: 30px;
   color: #31343d;
   background-color: #92cccd;
-} 
-
-
-/* .hero-banner div h2 {
-  display: flex;
-  padding: 5px;
-  font-size: 30px;
-  color: #31343d;
-  background-color: #92cccd; */
 }
 
 h1,
@@ -108,6 +97,7 @@ p {
 .proj4,
 .proj5 {
   background-repeat: no-repeat;
+  background-position: center;
   border: 6px solid;
   border-color: #92cccd;
 }
@@ -116,7 +106,6 @@ p {
   background-image: url("../images/02-hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 /* FLEX */ /* ----------------------------------- */
 .flexcontainer {
@@ -142,15 +131,15 @@ p {
 .flex-item div {
   background-color: #92cccd;
   color: #31343d;
-  /* line-height: 0.5px; */
   margin-bottom: 10px;
-  margin-top: -10px;
-  padding-left: 5px;
-  padding-right: 5px;  
+  padding: 10px;
+  text-decoration: none !important;
 }
 
 .flex-item div h3 {
   font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /* <!-- ------------------ --> */
 /* aside */
@@ -160,7 +149,7 @@ p {
   grid-template-columns: 400px 1fr;
   margin: 50px 0px;
 }
-.page-section article, 
+.page-section article,
 .page-section .flexcontainer,
 .page-section .contact {
   padding: 0px 70px;
@@ -170,13 +159,16 @@ p {
   padding: 0px 60px;
 }
 
-#about h2, #work h2, #contact h2 {
+#about h2,
+#work h2,
+#contact h2 {
   padding-right: 0.5em;
   text-align: right;
   font-size: 42px;
-  color: #31343d; 
+  color: #31343d;
 }
 
+/* contact me/footer */
 #contact ul {
   display: flex;
   flex-direction: row;
@@ -194,8 +186,26 @@ p {
 @media screen and (max-width: 768px) {
   .flex-item {
     flex-basis: 100%;
+    flex-wrap: wrap;
   }
   .flex-item:first-child {
     min-height: 150px;
+  }
+  .flex-item2 {
+    flex-basis: 50%;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr;  */
+    grid-auto-flow: column;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .page-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 0px 1fr;
+  }
+  .page-section h2 {
   }
 }
